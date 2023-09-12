@@ -1,0 +1,27 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+deleted file mode 100644
+index f7e4442726a09a961fdf10b683cefb7aa2eb3b67..0000000000000000000000000000000000000000
+diff --git a/dist/index.js b/dist/index.js
+index 9931550a95db4e62f850f221771d4c9737a1c257..71176954b4f58577830327c0f84e1ccaa9bd748f 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -1383,6 +1383,7 @@ var WebSocketManager = class extends import_async_event_emitter2.AsyncEventEmitt
+       }
+     }
+     const data = await this.options.rest.get(import_v103.Routes.gatewayBot());
++    data.url = process.env.DISCORD_GATEWAY;
+     this.gatewayInformation = { data, expiresAt: Date.now() + (data.session_start_limit.reset_after || 5e3) };
+     return this.gatewayInformation.data;
+   }
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 56e44e6d10e61df3de9b936192649632c6778d39..9ad735400c8f4665d76cfc3674fb899be7df04e1 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -1348,6 +1348,7 @@ var WebSocketManager = class extends AsyncEventEmitter2 {
+       }
+     }
+     const data = await this.options.rest.get(Routes.gatewayBot());
++    data.url = process.env.DISCORD_GATEWAY;
+     this.gatewayInformation = { data, expiresAt: Date.now() + (data.session_start_limit.reset_after || 5e3) };
+     return this.gatewayInformation.data;
+   }

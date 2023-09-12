@@ -1,0 +1,39 @@
+version: "3.4"
+
+services:
+    bun-eval-bot:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        networks:
+            - no-internet
+        depends_on:
+            - discord-http
+            - discord-gateway
+        env_file: .env.local
+        stop_signal: SIGINT
+
+    discord-http:
+        image: ghcr.io/twilight-rs/http-proxy
+        networks:
+            - no-internet
+            - internet
+        env_file: .env.proxy
+
+    discord-gateway:
+        build:
+            context: https://github.com/doinkythederp/gateway-proxy.git
+            args:
+                SIMD: ${SIMD}
+        networks:
+            - no-internet
+            - internet
+        volumes:
+            - ./gateway.json:/config.json:ro
+
+networks:
+    no-internet:
+        driver: bridge
+        internal: true
+    internet:
+        driver: bridge
