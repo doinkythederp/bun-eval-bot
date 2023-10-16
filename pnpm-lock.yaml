@@ -36,7 +36,7 @@ dependencies:
     version: 14.13.0(bufferutil@4.0.7)(utf-8-validate@6.0.3)
   optionals:
     specifier: github:doinkythederp/optionals
-    version: github.com/doinkythederp/optionals/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef
+    version: git/github.com+doinkythederp/optionals/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef
   source-map:
     specifier: ^0.7.4
     version: 0.7.4
@@ -50,8 +50,8 @@ dependencies:
     specifier: ^5.0.0
     version: 5.2.2
   undici:
-    specifier: ^5.24.0
-    version: 5.24.0
+    specifier: ^5.26.2
+    version: 5.26.2
   utf-8-validate:
     specifier: ^6.0.3
     version: 6.0.3
@@ -68,7 +68,7 @@ devDependencies:
     version: 1.0.0
   bun-types:
     specifier: latest
-    version: 1.0.1
+    version: 1.0.6
 
 packages:
 
@@ -517,6 +517,11 @@ packages:
     dev: false
     patched: true
 
+  /@fastify/busboy@2.0.0:
+    resolution: {integrity: sha512-JUFJad5lv7jxj926GPgymrWQxxjPYuJNiNjNMzqT+HiuP6Vl3dk5xzG+8sTX96np0ZAluvaMzPsjhHZ5rNuNQQ==}
+    engines: {node: '>=14'}
+    dev: false
+
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
     engines: {node: '>=6.0.0'}
@@ -639,8 +644,8 @@ packages:
       node-gyp-build: 4.6.1
     dev: false
 
-  /bun-types@1.0.1:
-    resolution: {integrity: sha512-7NrXqhMIaNKmWn2dSWEQ50znMZqrN/5Z0NBMXvQTRu/+Y1CvoXRznFy0pnqLe024CeZgVdXoEpARNO1JZLAPGw==}
+  /bun-types@1.0.6:
+    resolution: {integrity: sha512-5QwynfXiRCRxPW3ZnC0Dv+sHHmctP4SHIuzsRKOWYO0HF/qUpsxQVexoviaxpmwDsF1hoVDDFdc4xUuafOzx1g==}
     dev: true
 
   /busboy@1.6.0:
@@ -857,11 +862,11 @@ packages:
       busboy: 1.6.0
     dev: false
 
-  /undici@5.24.0:
-    resolution: {integrity: sha512-OKlckxBjFl0oXxcj9FU6oB8fDAaiRUq+D8jrFWGmOfI/gIyjk/IeS75LMzgYKUaeHzLUcYvf9bbJGSrUwTfwwQ==}
+  /undici@5.26.2:
+    resolution: {integrity: sha512-a4PDLQgLTPHVzOK+x3F79/M4GtyYPl+aX9AAK7aQxpwxDwCqkeZCScy7Gk5kWT3JtdFq1uhO3uZJdLtHI4dK9A==}
     engines: {node: '>=14.0'}
     dependencies:
-      busboy: 1.6.0
+      '@fastify/busboy': 2.0.0
     dev: false
 
   /update-browserslist-db@1.0.11(browserslist@4.21.10):
@@ -914,8 +919,8 @@ packages:
       nan: 2.17.0
     dev: false
 
-  github.com/doinkythederp/optionals/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef:
-    resolution: {tarball: https://codeload.github.com/doinkythederp/optionals/tar.gz/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef}
+  git/github.com+doinkythederp/optionals/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef:
+    resolution: {commit: 80f3d5d103aee055350143f0c2d7e33ad1f9f1ef, repo: git@github.com:doinkythederp/optionals.git, type: git}
     name: optionals
     version: 0.0.0
     dev: false
