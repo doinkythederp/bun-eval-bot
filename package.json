@@ -23,7 +23,7 @@
         "source-map": "^0.7.4",
         "truncate-utf8-bytes": "^1.0.2",
         "tslib": "^2.6.2",
-        "undici": "^5.24.0",
+        "undici": "^5.26.2",
         "utf-8-validate": "^6.0.3",
         "zlib-sync": "^0.1.8"
     },
