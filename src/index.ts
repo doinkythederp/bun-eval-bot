@@ -35,7 +35,7 @@ client.once(Events.ClientReady, async (client) => {
     console.log(`Ready! Logged in as ${client.user.tag}`);
 });
 
-client.on(Events.MessageCreate, async (message) => {
+async function runCommand(message: Message) {
     if (message.partial) await message.fetch();
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
@@ -56,6 +56,12 @@ client.on(Events.MessageCreate, async (message) => {
         let asString = truncate(String(error), 1500);
         await message.reply(`Error: ${codeBlock(asString, "js")}`);
     }
+}
+
+client.on(Events.MessageCreate, runCommand);
+
+client.on(Events.MessageUpdate, async (old, message) => {
+    await runCommand(message);
 });
 
 client.on(Events.Error, console.error);

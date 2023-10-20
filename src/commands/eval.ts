@@ -65,9 +65,12 @@ async function compile(
     });
 }
 
+const evalMessageMap = new Map<string, Message>();
+
 export default {
     name: "eval",
     description: "Evaluate TypeScript code",
+    handleEdit: true,
     async run({ message, mainContent }) {
         const { code, flags } = parseCommand(mainContent);
         console.log("eval>", code, flags);
@@ -114,8 +117,14 @@ export default {
             errored = true;
             result = err;
         }
-        const resultString = truncate(inspect(result, { colors: true }), 1950);
+        const resultString = codeBlock(truncate(inspect(result, { colors: true }), 1950), "ansi");
 
-        await message.reply(codeBlock(resultString, "ansi"));
+        const reply = evalMessageMap.get(message.id);
+        if (reply) {
+            await reply.edit(resultString);
+        } else {
+            const reply = await message.reply(resultString);
+            evalMessageMap.set(message.id, reply);
+        }
     },
 } satisfies Command;

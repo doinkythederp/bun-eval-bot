@@ -9,5 +9,6 @@ export type CommandOptions = {
 export default interface Command {
     readonly name: string;
     readonly description: string;
+    readonly handleEdit?: boolean;
     run: (options: CommandOptions) => Promise<void>;
 }
