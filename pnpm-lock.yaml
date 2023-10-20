@@ -35,8 +35,8 @@ dependencies:
     specifier: ^14.13.0
     version: 14.13.0(bufferutil@4.0.7)(utf-8-validate@6.0.3)
   optionals:
-    specifier: github:doinkythederp/optionals
-    version: git@github.com+doinkythederp/optionals/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef
+    specifier: git+https://github.com/doinkythederp/optionals.git
+    version: github.com/doinkythederp/optionals/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef
   source-map:
     specifier: ^0.7.4
     version: 0.7.4
@@ -964,8 +964,8 @@ packages:
       nan: 2.17.0
     dev: false
 
-  git@github.com+doinkythederp/optionals/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef:
-    resolution: {commit: 80f3d5d103aee055350143f0c2d7e33ad1f9f1ef, repo: git@github.com:doinkythederp/optionals.git, type: git}
-    name: optionals
+  github.com/doinkythederp/optionals/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef:
+    resolution: {tarball: https://codeload.github.com/doinkythederp/optionals/tar.gz/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef}
+    name: optionals.git
     version: 0.0.0
     dev: false

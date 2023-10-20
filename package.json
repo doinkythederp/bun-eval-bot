@@ -19,7 +19,7 @@
         "@babel/preset-typescript": "^7.22.15",
         "bufferutil": "^4.0.7",
         "discord.js": "^14.13.0",
-        "optionals": "github:doinkythederp/optionals",
+        "optionals": "git+https://github.com/doinkythederp/optionals.git",
         "source-map": "^0.7.4",
         "truncate-utf8-bytes": "^1.0.2",
         "tslib": "^2.6.2",
