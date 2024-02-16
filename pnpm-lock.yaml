@@ -36,7 +36,7 @@ dependencies:
     version: 14.13.0(bufferutil@4.0.7)(utf-8-validate@6.0.3)
   optionals:
     specifier: git+https://github.com/doinkythederp/optionals.git
-    version: github.com/doinkythederp/optionals/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef
+    version: git/github.com+doinkythederp/optionals/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef
   source-map:
     specifier: ^0.7.4
     version: 0.7.4
@@ -50,8 +50,8 @@ dependencies:
     specifier: ^5.0.0
     version: 5.2.2
   undici:
-    specifier: ^5.26.2
-    version: 5.26.2
+    specifier: ^5.28.3
+    version: 5.28.3
   utf-8-validate:
     specifier: ^6.0.3
     version: 6.0.3
@@ -68,7 +68,7 @@ devDependencies:
     version: 1.0.0
   bun-types:
     specifier: latest
-    version: 1.0.6
+    version: 1.0.26
 
 packages:
 
@@ -644,12 +644,24 @@ packages:
       '@babel/types': 7.22.17
     dev: true
 
+  /@types/node@20.11.19:
+    resolution: {integrity: sha512-7xMnVEcZFu0DikYjWOlRq7NTPETrm7teqUT2WkQjrTIkEgUyyGdWsj/Zg8bEJt5TNklzbPD1X3fqfsHw3SpapQ==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
+
   /@types/node@20.6.0:
     resolution: {integrity: sha512-najjVq5KN2vsH2U/xyh2opaSEz6cZMR2SetLIlxlj08nOcmPOemJmUK2o4kUzfLqfrWE0PIrNeE16XhYDd3nqg==}
     dev: false
 
   /@types/truncate-utf8-bytes@1.0.0:
     resolution: {integrity: sha512-pa3icl1RawLUUKmQE1h0G381EpWMU8bTnZT4YF3Ey9D7VI4fL1BQvgZ8HKbYok9kKXeUSCr/E3vnscW8Ck3QKg==}
+    dev: true
+
+  /@types/ws@8.5.10:
+    resolution: {integrity: sha512-vmQSUcfalpIq0R9q7uTo2lXs6eGIpt9wtnLdMv9LVpIjCA/+ufZRozlVoVelIYixx1ugCBKDhn89vnsEGOCx9A==}
+    dependencies:
+      '@types/node': 20.11.19
     dev: true
 
   /@types/ws@8.5.5:
@@ -689,8 +701,11 @@ packages:
       node-gyp-build: 4.6.1
     dev: false
 
-  /bun-types@1.0.6:
-    resolution: {integrity: sha512-5QwynfXiRCRxPW3ZnC0Dv+sHHmctP4SHIuzsRKOWYO0HF/qUpsxQVexoviaxpmwDsF1hoVDDFdc4xUuafOzx1g==}
+  /bun-types@1.0.26:
+    resolution: {integrity: sha512-VcSj+SCaWIcMb0uSGIAtr8P92zq9q+unavcQmx27fk6HulCthXHBVrdGuXxAZbFtv7bHVjizRzR2mk9r/U8Nkg==}
+    dependencies:
+      '@types/node': 20.11.19
+      '@types/ws': 8.5.10
     dev: true
 
   /busboy@1.6.0:
@@ -900,6 +915,10 @@ packages:
     hasBin: true
     dev: false
 
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: true
+
   /undici@5.22.1:
     resolution: {integrity: sha512-Ji2IJhFXZY0x/0tVBXeQwgPlLWw13GVzpsWPQ3rV50IFMMof2I55PZZxtm4P6iNq+L5znYN9nSTAq0ZyE6lSJw==}
     engines: {node: '>=14.0'}
@@ -907,8 +926,8 @@ packages:
       busboy: 1.6.0
     dev: false
 
-  /undici@5.26.2:
-    resolution: {integrity: sha512-a4PDLQgLTPHVzOK+x3F79/M4GtyYPl+aX9AAK7aQxpwxDwCqkeZCScy7Gk5kWT3JtdFq1uhO3uZJdLtHI4dK9A==}
+  /undici@5.28.3:
+    resolution: {integrity: sha512-3ItfzbrhDlINjaP0duwnNsKpDQk3acHI3gVJ1z4fmwMK31k5G9OVIAMLSIaP6w4FaGkaAkN6zaQO9LUvZ1t7VA==}
     engines: {node: '>=14.0'}
     dependencies:
       '@fastify/busboy': 2.0.0
@@ -964,8 +983,8 @@ packages:
       nan: 2.17.0
     dev: false
 
-  github.com/doinkythederp/optionals/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef:
-    resolution: {tarball: https://codeload.github.com/doinkythederp/optionals/tar.gz/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef}
+  git/github.com+doinkythederp/optionals/80f3d5d103aee055350143f0c2d7e33ad1f9f1ef:
+    resolution: {commit: 80f3d5d103aee055350143f0c2d7e33ad1f9f1ef, repo: git@github.com:doinkythederp/optionals.git, type: git}
     name: optionals.git
     version: 0.0.0
     dev: false
